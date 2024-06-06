@@ -1,4 +1,6 @@
 import './ImcCalc.css'
+// IMPORTANDO COMPONENTS DE BOTÃO
+import Button from './Button'
 
 const ImcCalc = () => {
   return (
@@ -20,8 +22,8 @@ const ImcCalc = () => {
 
             
             <div className="action-control">
-                <button>Calcular</button>
-                <button>Limpar</button>
+                <Button id='calc-btn' text='Calcular' />
+                <Button id='clear-btn' text='limpar' />
             </div>
         </form>
     </div>
