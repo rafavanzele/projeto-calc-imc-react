@@ -1,15 +1,15 @@
-import React from 'react'
+import './ImcTable.css'
 import Button from './Button'
 
-const ImcTable = ({data}) => {
+const ImcTable = ({data, imc, info, infoClass, resetCalc}) => {
   return (
     <div id='result-container'>
       <p id="imc-number">
-        Seu Imc:
+        Seu Imc: <span className={infoClass}>{imc}</span>
       </p>
 
       <p id="imc-info">
-        Situação atual:
+        Situação atual: <span className={infoClass}>{info}</span>
       </p>
 
       <h3>Confira as classificações</h3>
@@ -32,7 +32,7 @@ const ImcTable = ({data}) => {
       </div>
 
 
-      <Button id='back-btn' text='voltar'/>
+      <Button id='back-btn' text='voltar' action={resetCalc}/>
     </div>
   )
 }
